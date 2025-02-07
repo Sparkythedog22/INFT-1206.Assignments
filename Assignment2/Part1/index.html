@@ -121,24 +121,33 @@ Index file for Assignment 2 Part 1.
       </article>
 
       <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
           <img
-            srcset="firefox_logo-only_RGB-400px.png 400w, firefox_logo-only_RGB.png 1200w"
-            sizes="(max-width: 600px) 400px, 1200px"
+            srcset="firefox_logo-only_RGB-120px.png 120w, firefox_logo-only_RGB-400px.png 400w"
+            sizes="
+            (max-width: 500px) 120px,
+            400px"
             src="firefox_logo-only_RGB.png"
             alt="Firefox"
           >
         </a>
         <a href="https://www.mozilla.org/">
           <img
-            srcset="mozilla-dinosaur-head-400px.png 400w, mozilla-dinosaur-head.png 1200w"
-            sizes="(max-width: 600px) 400px, 1200px"
+            srcset="mozilla-dinosaur-head-120px.png 120w, mozilla-dinosaur-head-400px.png 400w"
+            sizes="
+            (max-width: 500px) 120px,
+            400px"
             src="mozilla-dinosaur-head.png"
             alt="Mozilla">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img src="firefox-addons.jpg" alt="Addons">
+          <img
+            srcset="firefox-addons-120px.jpg 120w, firefox-addons.jpg 400w"
+            sizes="
+            (max-width: 500px) 120px,
+            400px"
+            src="firefox-addons.jpg"
+            alt="Addons">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
           <img src="mdn.svg" alt="Mozilla Developer Network">
@@ -147,7 +156,10 @@ Index file for Assignment 2 Part 1.
       </div>
 
       <div class="red-panda">
-        <img class="red-panda" src="red-panda-1200px.jpg" width="1200" alt="Red Panda">
+        <picture>
+        <source media="(max-width: 600px)" srcset="red-panda.jpg">
+        <source media="(max-width:)">
+        </picture>
       </div>
 
     </main>
