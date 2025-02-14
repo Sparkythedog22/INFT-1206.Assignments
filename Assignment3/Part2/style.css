@@ -37,9 +37,14 @@ div {
   */
   font-size: 1.1rem;
 
-  background: #ff0000;
+  background: red;
 
   color: #4040B0;
   text-shadow: 1px 1px 1px black;
-  border-radius: 5px;
+  border-radius: 3px;
+
+  border: 1px solid darkred;
+
+  background-image: linear-gradient(to bottom right, rgb(0, 0, 0, 0%), rgb(0, 0, 0, 0.2) 30%);
+
 }
