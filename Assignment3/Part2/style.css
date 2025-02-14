@@ -49,8 +49,9 @@ div {
   background-image: linear-gradient(to bottom right, rgb(0, 0, 0, 0%), rgb(0, 0, 0, 0.2) 30%);
 
   box-shadow:
-    1px 1px 5px black,
-    inset 2px 2px white
+  black 2px 2px 5px,
+    inset 3px 3px 3px rgb(255,255,255,50%),
+    inset -3px -3px 3px rgb(0,0,0,50%)
   ;
 
 }
