@@ -78,9 +78,23 @@ header, footer {
 }
 
 * {
-  font-family: 'lovatolight'
+  font-family: 'lovatolight';
+
+  font-size: 10px;
 }
 
 h1, h2 {
-  font-family: 'josefin_slabbold'
+  font-family: 'josefin_slabbold';
+}
+
+h1 {
+  font-size: 3.0em;
+}
+
+h2 {
+  font-size: 2.0em;
+}
+
+body {
+  line-height: 1.5em;
 }
