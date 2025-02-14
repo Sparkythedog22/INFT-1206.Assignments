@@ -20,6 +20,12 @@ div {
   text-align: center;
 
   /*
+  Vertical alignment
+  */
+
+  padding: 10%;
+
+  /*
   Base font size calculated to be 16px.
   Desired font size is 17~18px.
 
@@ -30,4 +36,8 @@ div {
         ~= 1.1 rem
   */
   font-size: 1.1rem;
+
+  background: #ffff00;
+
+  color: #4040B0;
 }
