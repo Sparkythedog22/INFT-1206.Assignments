@@ -109,3 +109,34 @@ body {
 section h2+p {
   text-indent: 20px;
 }
+
+/* Links */
+
+
+a:link {
+  color: #a65e5e;
+}
+
+a:visited {
+  color: #733F3F;
+}
+a:focus {
+  text-decoration: none;
+  background: #8CF28E;
+  outline-color: transparent;
+}
+a:hover {
+  text-decoration: none;
+  background: #EDFDEF;
+}
+
+a[href^='http']::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+
+  background-size: 100%;
+  background-image: url(external-link-52.png);
+}
