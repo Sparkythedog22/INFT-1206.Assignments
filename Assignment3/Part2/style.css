@@ -17,13 +17,14 @@ div {
 
   margin: auto;
 
-  text-align: center;
-
   /*
-  Vertical alignment
+  Align text
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
   */
 
-  padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   /*
   Base font size calculated to be 16px.
@@ -39,12 +40,17 @@ div {
 
   background: red;
 
-  color: #4040B0;
+  color: white;
   text-shadow: 1px 1px 1px black;
-  border-radius: 3px;
+  border-radius: 10px;
 
   border: 1px solid darkred;
 
   background-image: linear-gradient(to bottom right, rgb(0, 0, 0, 0%), rgb(0, 0, 0, 0.2) 30%);
+
+  box-shadow:
+    1px 1px 5px black,
+    inset 2px 2px white
+  ;
 
 }
