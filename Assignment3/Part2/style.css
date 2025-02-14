@@ -37,7 +37,9 @@ div {
   */
   font-size: 1.1rem;
 
-  background: #ffff00;
+  background: #ff0000;
 
   color: #4040B0;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 5px;
 }
