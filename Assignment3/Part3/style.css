@@ -150,7 +150,7 @@ a[href^='http']::after {
 ul, ol {
   line-height: 1.5em;
 
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 ul {
