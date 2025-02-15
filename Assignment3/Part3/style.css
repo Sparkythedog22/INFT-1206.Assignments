@@ -51,6 +51,8 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
+/* fonts */
+
 @font-face {
   font-family: 'josefin_slabbold';
   src: url('fonts/josefinslab-bold-webfont.eot');
@@ -77,6 +79,8 @@ header, footer {
 
 }
 
+/* general text */
+
 * {
   font-family: 'lovatolight';
 
@@ -99,7 +103,7 @@ h2 {
   font-size: 2.0em;
 }
 
-body {
+p {
   line-height: 1.5em;
 
   letter-spacing: 1px;
@@ -117,8 +121,8 @@ a:link {
   color: #a65e5e;
 }
 
-a:visited {
-  color: #733F3F;
+a:link {
+  color: #531F1F;
 }
 a:focus {
   text-decoration: none;
@@ -139,4 +143,12 @@ a[href^='http']::after {
 
   background-size: 100%;
   background-image: url(external-link-52.png);
+}
+
+/* Lists */
+
+ul, ol {
+  line-height: 1.5em;
+
+  margin-top: 1em;
 }
