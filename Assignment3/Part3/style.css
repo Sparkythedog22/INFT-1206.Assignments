@@ -160,3 +160,19 @@ ul {
 ol {
   list-style: lower-latin;
 }
+
+/* Navigation */
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  border: solid #a66 1px;
+  text-align: center;
+
+  width: 120px;
+
+  padding: 10%;
+  margin-top: 10px;
+}
