@@ -68,3 +68,9 @@ nav ul {
   display: flex;
   justify-content: space-between;
 }
+
+/* Article */
+
+img {
+  float: left;
+}
