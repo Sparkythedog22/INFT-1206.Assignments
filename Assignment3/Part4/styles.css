@@ -56,3 +56,10 @@ nav a {
 .feature {
     width: 200px;
 }
+
+/* Navbar */
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
