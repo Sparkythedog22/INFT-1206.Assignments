@@ -59,6 +59,11 @@ nav a {
 
 /* Navbar */
 
+nav {
+  position: sticky;
+  top: 0px;
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
