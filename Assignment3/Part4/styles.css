@@ -74,3 +74,8 @@ nav ul {
 img {
   float: left;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
