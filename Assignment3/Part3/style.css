@@ -95,7 +95,7 @@ and Jacques Le Bailly
 /* general text */
 
 html {
-  font-family: 'Abhaya Libre';
+  font-family: 'Abhaya Libre', serif;
 
   font-size: 10px;
 }
@@ -108,7 +108,7 @@ body p {
 }
 
 h1, h2 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 
   letter-spacing: 1px;
