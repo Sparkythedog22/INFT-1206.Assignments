@@ -15,7 +15,6 @@ body {
 img {
     max-width: 100%;
     display: block;
-    margin: 0px 15px 15px 0px;
 }
 
 .logo {
@@ -72,8 +71,9 @@ nav ul {
 
 /* Article */
 
-img {
+article img {
   float: left;
+  margin: 0px 15px 15px 0px;
 }
 
 .grid {
