@@ -92,6 +92,9 @@ html {
   font-family: 'Abhaya Libre';
 
   font-size: 10px;
+}
+
+body p {
   line-height: 1.5em;
 
   letter-spacing: 1px;
