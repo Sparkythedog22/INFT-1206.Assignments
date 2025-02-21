@@ -71,7 +71,7 @@ nav ul {
 
 /* Article */
 
-article img {
+article img.feature {
   float: left;
   margin: 0px 15px 15px 0px;
 }
