@@ -52,10 +52,16 @@ header, footer {
 /* WRITE YOUR CODE BELOW HERE */
 
 /*
-Fonts
+--- Fonts ---
 
-Files from fontsquirrel
-Converted via https://transfonter.org
+Abhaya Libre from FontSquirrel
+Designed by Mooniak
+
+Montserrat from Google Fonts
+Deisgned by Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral,
+and Jacques Le Bailly
+
+@font-face generated via https://transfonter.org
 */
 
 @font-face {
