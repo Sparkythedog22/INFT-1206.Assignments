@@ -54,13 +54,13 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(weight / 14) + ' stone';
-    const temperature =  Math.round((temperature - 32) * 5/9) + ' centigrade';
+    const weight = Math.round(300 / 14) + ' stone';
+    const temperature =  Math.round((94 - 32) * 5/9) + ' centigrade';
 
     newStory.replaceAll("94 fahrenheit", temperature);
     newStory.replaceAll("300 pounds", weight);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
