@@ -5,7 +5,7 @@ Date: 03 March 2025
 JavaScript for a silly story generator
 */
 
-// 1. Elements and Functions
+// 1. Element Selectors
 
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
@@ -34,3 +34,24 @@ const insertZ = [
   "melted into a puddle on the sidewalk",
   "turned into a slug and crawled away"
 ]
+
+// 3. Event Listener & New Function
+
+randomize.addEventListener('click', result);
+
+function result() {
+
+  if(customName.value !== '') {
+    const name = customName.value;
+
+  }
+
+  if(document.getElementById("uk").checked) {
+    const weight = Math.round(300);
+    const temperature =  Math.round(94);
+
+  }
+
+  story.textContent = ;
+  story.style.visibility = 'visible';
+}
