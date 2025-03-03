@@ -44,7 +44,10 @@ function result() {
   var xItem = randomValueFromArray(insertX);
   var yItem = randomValueFromArray(insertY);
   var zItem = randomValueFromArray(insertZ);
-  
+
+  // replace newStory placeholders
+  newStory = newStory.replaceAll(":insertx:", xItem).replaceAll(":inserty:", yItem).replaceAll(":insertz:", zItem);
+
   if(customName.value !== '') {
     const name = customName.value;
 
