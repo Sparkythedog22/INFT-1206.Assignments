@@ -50,13 +50,15 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-
+    newStory = newStory.replaceAll("Bob", name);
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const weight = Math.round(weight / 14) + ' stone';
+    const temperature =  Math.round((temperature - 32) * 5/9) + ' centigrade';
 
+    newStory.replaceAll("94 fahrenheit", temperature);
+    newStory.replaceAll("300 pounds", weight);
   }
 
   story.textContent = ;
