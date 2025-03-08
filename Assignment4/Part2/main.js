@@ -1,3 +1,10 @@
+/*
+Name: Chael
+File: main.js
+Date: 08 March 2025
+JavaScript for an image gallery.
+*/
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
