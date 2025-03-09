@@ -22,12 +22,20 @@ const imageFilenames = [
 
 /* Declaring the alternative text for each image file */
 
+const imageAltText = [
+    'A human eye.',
+    'A close-up image of a rock.',
+    'Some flowers.',
+    'Ancient Egyptian art.',
+    'A moth on a leaf.'
+]
+
 /* Looping through images */
 
-for (const imageFilename of imageFilenames) {
+for (let i = 0; i < imageFilenames.length; i++) {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', `images/${imageFilename}`);
-    newImage.setAttribute('alt', `images/${imageFilename}`);
+    newImage.setAttribute('src', `images/${imageFilenames[i]}`);
+    newImage.setAttribute('alt', `${imageAltText[i]}`);
     thumbBar.appendChild(newImage);
 }
 
