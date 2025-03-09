@@ -28,14 +28,21 @@ const imageAltText = [
     'Some flowers.',
     'Ancient Egyptian art.',
     'A moth on a leaf.'
-]
+];
 
 /* Looping through images */
 
 for (let i = 0; i < imageFilenames.length; i++) {
     const newImage = document.createElement('img');
+
     newImage.setAttribute('src', `images/${imageFilenames[i]}`);
     newImage.setAttribute('alt', `${imageAltText[i]}`);
+
+    newImage.addEventListener("click", (e) => {
+        displayedImage.setAttribute('src', `images/${imageFilenames[i]}`);
+        displayedImage.setAttribute('alt', `${imageAltText[i]}`);
+    });
+
     thumbBar.appendChild(newImage);
 }
 
