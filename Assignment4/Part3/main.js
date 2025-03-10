@@ -36,4 +36,30 @@ class Ball {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
+
+  update() {
+    // Check if ball has gone past the right edge of the screen
+    if ((this.x + this.size) >= width) {
+      this.velX = -(this.velX);
+    }
+  
+    // Check if ball has gone past the left edge of the screen
+    if ((this.x - this.size) <= 0) {
+      this.velX = -(this.velX);
+    }
+  
+    // Check if ball has gone past the bottom edge of the screen
+    if ((this.y + this.size) >= height) {
+      this.velY = -(this.velY);
+    }
+  
+    // Check if ball has gone past the top edge of the screen
+    if ((this.y - this.size) <= 0) {
+      this.velY = -(this.velY);
+    }
+  
+    // Move the ball
+    this.x += this.velX;
+    this.y += this.velY;
+  }  
 }
