@@ -1,4 +1,4 @@
-// set up canvas
+// setup canvas
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -12,11 +12,13 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function to generate random RGB color value
+// function to generate random color
 
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+
+// class to represent a ball
 
 class Ball {
   constructor(x, y, velX, velY, color, size) {
@@ -36,29 +38,36 @@ class Ball {
   }
 
   update() {
-    if (this.x + this.size >= width) {
+    // Check if ball has gone past screen bounds
+
+    // Right
+    if ((this.x + this.size) >= width) {
       this.velX = -Math.abs(this.velX);
     }
-
-    if (this.x - this.size <= 0) {
+  
+    // Left
+    if ((this.x - this.size) <= 0) {
       this.velX = Math.abs(this.velX);
     }
-
-    if (this.y + this.size >= height) {
+  
+    // Bottom
+    if ((this.y + this.size) >= height) {
       this.velY = -Math.abs(this.velY);
     }
-
-    if (this.y - this.size <= 0) {
+  
+    // Top
+    if ((this.y - this.size) <= 0) {
       this.velY = Math.abs(this.velY);
     }
-
+  
+    // Move the ball
     this.x += this.velX;
     this.y += this.velY;
   }
 
   collisionDetect() {
     for (const ball of balls) {
-      if (!(this === ball)) {
+      if (this !== ball) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -70,6 +79,8 @@ class Ball {
     }
   }
 }
+
+
 
 const balls = [];
 
@@ -90,7 +101,7 @@ while (balls.length < 25) {
 }
 
 function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {

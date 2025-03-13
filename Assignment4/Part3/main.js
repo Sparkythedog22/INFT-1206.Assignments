@@ -38,24 +38,26 @@ class Ball {
   }
 
   update() {
-    // Check if ball has gone past the right edge of the screen
+    // Check if ball has gone past screen bounds
+
+    // Right
     if ((this.x + this.size) >= width) {
-      this.velX = -(this.velX);
+      this.velX = -Math.abs(this.velX);
     }
   
-    // Check if ball has gone past the left edge of the screen
+    // Left
     if ((this.x - this.size) <= 0) {
-      this.velX = -(this.velX);
+      this.velX = Math.abs(this.velX);
     }
   
-    // Check if ball has gone past the bottom edge of the screen
+    // Bottom
     if ((this.y + this.size) >= height) {
-      this.velY = -(this.velY);
+      this.velY = -Math.abs(this.velY);
     }
   
-    // Check if ball has gone past the top edge of the screen
+    // Top
     if ((this.y - this.size) <= 0) {
-      this.velY = -(this.velY);
+      this.velY = Math.abs(this.velY);
     }
   
     // Move the ball
@@ -69,7 +71,7 @@ class Ball {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-  
+
         if (distance < this.size + ball.size) {
           ball.color = this.color = randomRGB();
         }
