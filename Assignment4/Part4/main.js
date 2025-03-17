@@ -121,6 +121,30 @@ class EvilCircle extends Shape {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
+
+  checkBounds() {
+    // Check if ball has gone past screen bounds
+
+    // Right
+    if ((this.x + this.size) >= width) {
+      this.x -= this.size;
+    }
+  
+    // Left
+    if ((this.x - this.size) <= 0) {
+      this.x += this.size;
+    }
+  
+    // Bottom
+    if ((this.y + this.size) >= height) {
+      this.y -= this.size;
+    }
+  
+    // Top
+    if ((this.y - this.size) <= 0) {
+      this.y += this.size;
+    }
+  }
 }
 
 
