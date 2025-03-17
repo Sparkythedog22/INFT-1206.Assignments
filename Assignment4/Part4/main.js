@@ -30,7 +30,7 @@ class Shape {
 }
 
 class Ball extends Shape {
-  exist;
+  exists;
 
   constructor(x, y, velX, velY, color, size) {
     super(x, y, velX, velY);
@@ -77,7 +77,7 @@ class Ball extends Shape {
 
   collisionDetect() {
     for (const ball of balls) {
-      if (this !== ball && ball.exist) {
+      if (this !== ball && ball.exists) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -148,7 +148,7 @@ class EvilCircle extends Shape {
 
   collisionDetect() {
     for (const ball of balls) {
-      if (ball.exist) {
+      if (ball.exists) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -180,15 +180,29 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+// Spawn the player.
+// If the player is spawned offscreen, it will immediately be moved onscreen.
+const player = new EvilCircle(
+  random(0, width),
+  random(0, height)
+);
+
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if(ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
+
+  // Draw the evil circle
+  player.draw();
+  player.checkBounds();
+  player.collisionDetect();
 
   requestAnimationFrame(loop);
 }
