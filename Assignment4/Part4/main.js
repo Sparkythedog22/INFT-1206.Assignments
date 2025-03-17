@@ -95,7 +95,7 @@ class EvilCircle extends Shape {
     super(x, y, 20, 20);
     this.color = "white";
     this.size = 10;
-    
+
     window.addEventListener("keydown", (e) => {
       switch (e.key) {
         case "a":
@@ -112,6 +112,14 @@ class EvilCircle extends Shape {
           break;
       }
     });
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
   }
 }
 
