@@ -157,7 +157,7 @@ class EvilCircle extends Shape {
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
-          ballCountDecrement();
+          scoreDecrement();
         }
       }
     }
@@ -165,11 +165,11 @@ class EvilCircle extends Shape {
 }
 
 let ballCount = 0;
-function ballCountIncrement() {
+function scoreIncrement() {
   ballCount++;
   para.textContent = `Ball count: ${ballCount}`;
 }
-function ballCountDecrement() {
+function scoreDecrement() {
   ballCount--;
   para.textContent = `Ball count: ${ballCount}`;
 }
@@ -190,7 +190,7 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
-  ballCountIncrement();
+  scoreIncrement();
 }
 
 // Spawn the player.
